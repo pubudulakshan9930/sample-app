@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 4000;
+const authRoutes = require("./src/routes/authroutes");
+
+app.use("/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
